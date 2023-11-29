@@ -1,0 +1,13 @@
+
+.filter-section {
+    background-color: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: none;
+    border: 1px solid darken($color-rojo-oscuro, 10%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 3px;
+  }

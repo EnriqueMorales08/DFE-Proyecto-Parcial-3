@@ -1,0 +1,22 @@
+  <header>
+    
+    <div class="app-title">
+      {{ title | uppercase }}
+    </div> 
+
+    <div id="contenedor_header">
+        <nav id="navbar" >
+            <ul id="items">
+                <li><a routerLink="/dashboard" routerLinkActive="active">Inicio</a></li>
+                <li><a routerLink="/inventario" routerLinkActive="active">Inventario</a></li>
+                <li><a routerLink="/avance-venta" routerLinkActive="active">Reporte ventas</a></li>
+            </ul>
+        </nav>
+    </div>       
+</header>  
+  <main>
+  
+    <router-outlet></router-outlet>
+  
+  </main>
+  

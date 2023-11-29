@@ -1,0 +1,45 @@
+<div class="table-container">
+
+    <table id="data-table" >
+  
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Imagen</th>
+          <th>Estado</th>
+          <th>Plataforma</th>
+          <th>Notas</th>
+          <th>Precio</th>
+          <th>Descripcion</th>
+          <th>Cliente</th>
+          <th>Vendedor</th>
+          <th>Total de Ventas</th>
+          <th>Precio Total</th>
+        </tr>
+      </thead>
+  
+      <tbody >
+  
+        <tr *ngFor="let juego of listadoJuegos">
+          <td> <strong>{{ juego.id }}</strong> </td>
+          <td> <img [src]="rutaImagen + juego.imagen" [alt]="juego.id"> </td>
+          <td> <span class="tag">{{ juego.estado }}</span> </td>
+          <td>{{ juego.plataforma }}</td>
+          <td>{{ juego.notas }}</td>
+          <td>{{ juego.precioVenta | currency }}</td>
+          <td>{{ juego.descripcion }}</td>
+          <td>{{ !!juego.cliente ? juego.cliente : 'N/A' }}</td>
+          <td>{{ !!juego.vendedor ? juego.vendedor : 'N/A' }}</td>
+          <td>{{ !!juego.totalventas ? juego.totalventas: 'N/A'}}</td>
+          <td>{{ juego.totalaPagar | currency}}</td>
+        </tr>
+  
+      </tbody>
+  
+    </table>
+  
+  </div>
+  
+  <div class="message" *ngIf="listadoJuegos.length === 0">
+    <p>{{ cargandoJuegos ? 'Cargando...' : 'No se encontraron registros...'}}</p>
+  </div>
